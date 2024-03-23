@@ -1,13 +1,21 @@
 import React from "react";
-import { data } from "./script/data";
 
-const List = () => {
+const List = ({ list, handleDel }) => {
+  const getIndex = (index) => {
+    handleDel(index);
+  };
+
   return (
-    <div>
-      {data.map((item, index) => (
-        <div key={index}>{item}</div>
-      ))}
-    </div>
+    <>
+      <h2>リスト</h2>
+      <ul>
+        {list.map((item, index) => (
+          <li key={item} onClick={() => getIndex(index)}>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </>
   );
 };
 

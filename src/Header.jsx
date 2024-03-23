@@ -1,8 +1,8 @@
 import React from "react";
 
-const Header = ({ handleList }) => {
+const Header = ({ handleTab }) => {
   const handleClick = (text) => {
-    handleList(text);
+    handleTab(text);
   };
 
   return (
